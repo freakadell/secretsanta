@@ -154,38 +154,38 @@
 
             <div class="part" style="overflow-y: auto">
                 <div class="instructions">
-                    <h1><img src="assets/mistletoe.png" style="vertical-align: middle" /> Secret Santa Generator</h1>
-                    <p>No signup, no email, no bullshit. Just a straightforward <a href="https://github.com/arcanis/secretsanta">open-source</a> tool to help you generate your secret santa pairings. One static page, and that's it.</p>
-                    <p>In the most common case (no exclusion rules, pair each guest with another at random), enter the name of your guests one line at a time. Once done, press "generate" and you're all set: send the generated links to your guests (by mail, chat, whatever floats your boat) and their pairing will be revealed to them (and only them) once they open the link.</p>
-                    <h2>Where does this tool come from?</h2>
-                    <p>I wanted to make a Secret Santa over Facebook without having to reveal to anyone my guests email addresses (so nothing that would require a backend). I also wanted not to know who was paired with me, so I had to find a way to somehow obfuscate the information. And being a developer, well, my first thought was "Let's AES it, for fun and profits!". Classic.</p>
+                    <h1><img src="assets/mistletoe.png" style="vertical-align: middle" /> Salajase Jõuluvana kingipaari moodustaja</h1>
+                    #<p>No signup, no email, no bullshit. Just a straightforward <a href="https://github.com/arcanis/secretsanta">open-source</a> tool to help you generate your secret santa pairings. One static page, and that's it.</p>
+                    <p>Lisa nimed ja vajuta Suurt punast nuppu. Kopeeri ja saada vastav link igale osalisele emaili, Messengeri, tigupostiga.</p>
+                    <h2>Paaride nimed on salajased</h2>
+                    <p>Ainult lingi avaja näeb kellele ta kingituse tegema peab.</p>
                 </div>
             </div>
 
             <form id="form" class="part">
                 <textarea id="input" class="input" autofocus></textarea>
-                <button type="submit" class="generate">Generate your pairings</button>
+                <button type="submit" class="generate">Moodusta paarid</button>
                 <div id="result" class="result none"></div>
             </form>
 
         </div>
 
         <script id="input-placeholder" type="text/placeholder">
-            # You can add a user by adding a line
+            # Lisa nimed igaüks eraldi reale
             Santa
 
-            # You can add some details if you want to, using parentheses after the name
+            # Võid lisada hüüdnimesid või lisainfot sulgudes
             Nicholas (the elf)
 
-            # You can prevent someone from being paired with someone else
+            # Kui soovid vältida teatud paare lisa ! nagu näidisel
             Maël !Aurélie
             Aurélie !Maël
 
-            # You can also exclude someone from being paired with multiple people
-            # Careful: too many exclusion rules can make your secret santa less interesting!
+            # Vajadusel on võimalik lisada mitu nime kellele ei peaks kinki tegema
+            # Ettevaatust: liigapalju reegleid võib muuta "Salajase Jõuluvana" ebauvitavaks
             Rudolph !Santa !Nicholas (the elf)
 
-            # You can also cheat a bit and force someone to be paired with another
+            # Natuke võib ka petukat teha lisades soovitud paarid
             Nicholas (the saint) =Nicholas (the elf)
 
             ...
@@ -408,7 +408,7 @@
 
           var name = e.currentTarget.getAttribute( 'data-name' );
 
-          if ( ! confirm( 'If you click this link, you will be revealed ' + name + '\'s pairing! Are you sure you want to do this? Only do this if you\'re actually ' + name + '.\n\nUse right-click to copy the link target instead.' ) ) {
+          if ( ! confirm( 'Avades lingi saad teada kellele ' + name + '\' kingi teeb! Oled sa kindel, et soovid seda teha? Ava ling ainult kui oled ' + name + '.\n\nParema klikkiga saad kopeerida lingi' ) ) {
               e.preventDefault();
           }
 
