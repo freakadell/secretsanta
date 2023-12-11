@@ -154,8 +154,8 @@
 
             <div class="part" style="overflow-y: auto">
                 <div class="instructions">
-                    <h1><img src="assets/mistletoe.png" style="vertical-align: middle" /> Salajase Jõuluvana kingipaari moodustaja</h1>
-                    <p>Lisa nimed ja vajuta Suurt punast nuppu. Kopeeri ja saada vastav link igale osalisele emaili, Messengeri, tigupostiga.</p>
+                    <h1><img src="assets/mistletoe.png" style="vertical-align: middle" /> Jõuluvana kingipaari moodustaja</h1>
+                    <p>Lisa nimed ja vajuta nuppu "Moodusta paarid". Kopeeri ja saada vastav link igale osalisele emaili, Messengeri, tigupostiga.</p>
                     <h2>Paaride nimed on salajased</h2>
                     <p>Ainult lingi avaja näeb kellele ta kingituse tegema peab.</p>
                 </div>
@@ -408,7 +408,7 @@
 
           var name = e.currentTarget.getAttribute( 'data-name' );
 
-          if ( ! confirm( 'Avades lingi saad teada kellele ' + name + '\' kingi teeb! Oled sa kindel, et soovid seda teha? Ava ling ainult kui oled ' + name + '.\n\nParema klikkiga saad kopeerida lingi' ) ) {
+          if ( ! confirm( 'Avades lingi saad teada kellele ' + name + ' kingi teeb! Oled sa kindel, et soovid seda teha? Ava link ainult kui oled ' + name + '.\n\nLingi kopeerimiseks kasuta paremat klikki' ) ) {
               e.preventDefault();
           }
 
